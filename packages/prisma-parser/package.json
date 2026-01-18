@@ -1,0 +1,51 @@
+{
+  "name": "@prisma-uml/parser",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./renderers/mermaid": {
+      "types": "./dist/renderers/mermaid.d.ts",
+      "import": "./dist/renderers/mermaid.mjs",
+      "require": "./dist/renderers/mermaid.js"
+    },
+    "./renderers/plantuml": {
+      "types": "./dist/renderers/plantuml.d.ts",
+      "import": "./dist/renderers/plantuml.mjs",
+      "require": "./dist/renderers/plantuml.js"
+    },
+    "./renderers/dbml": {
+      "types": "./dist/renderers/dbml.d.ts",
+      "import": "./dist/renderers/dbml.mjs",
+      "require": "./dist/renderers/dbml.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@prisma/internals": "^5.0.0 || ^6.0.0 || ^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@prisma/internals": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@prisma/internals": "^6.3.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.0.0"
+  }
+}
