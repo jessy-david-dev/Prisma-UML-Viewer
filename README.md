@@ -59,4 +59,4 @@ pnpm start
 
 ## License
 
-MIT
+[MIT](./LICENSE)
